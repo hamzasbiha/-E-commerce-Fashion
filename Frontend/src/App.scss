@@ -1,0 +1,11 @@
+.App {
+  .link {
+    color: black;
+    text-decoration: none;
+  }
+}
+@mixin mobile {
+  @media (max-width:480px) {
+    @content;
+  }
+}

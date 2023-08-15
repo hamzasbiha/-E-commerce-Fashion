@@ -1,0 +1,61 @@
+@import "../../App.scss";
+
+.Card {
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @include mobile {
+    width: 40px;
+    gap: 5px;
+    align-items: center;
+    flex-direction: column;
+  }
+  .image {
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    position: relative;
+    &:hover {
+      .secondImg {
+        z-index: 2;
+        transform: scale(1.2);
+        transition: all 1s ease;
+      }
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+    }
+    .mainImg {
+      z-index: 1;
+    }
+    .span {
+      position: absolute;
+      top: 20px;
+      left: 50px;
+      background-color: white;
+      color: aquamarine;
+      padding: 3px 5px;
+      z-index: 3;
+    }
+ 
+  }
+
+  .prices {
+    display: flex;
+    gap: 30px;
+    font-size: 19px;
+    h3 {
+      font-size: 18px;
+      font-weight: 500;
+    }
+  }
+}
+.loding {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

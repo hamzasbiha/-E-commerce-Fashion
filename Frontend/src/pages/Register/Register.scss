@@ -1,0 +1,176 @@
+.register {
+  height: 100vh;
+  background-color: rgb(193, 190, 255);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .card {
+    width: 50%;
+    display: flex;
+    flex-direction: row-reverse;
+    background-color: white;
+    border-radius: 10px;
+    min-height: 600px;
+    overflow: hidden;
+
+    .left {
+      flex: 1;
+      background: linear-gradient(rgba(39, 11, 96, 0.5), rgba(39, 11, 96, 0.5)),
+        url("https://c1.wallpaperflare.com/preview/1017/473/68/clothing-store-shop-boutique-men-s-fashion-thumbnail.jpg")
+          center;
+      background-size: cover;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      color: white;
+
+      h1 {
+        font-size: 100px;
+        line-height: 100px;
+      }
+
+      p {
+      }
+
+      span {
+        font-size: 14px;
+      }
+
+      button {
+        width: 50%;
+        padding: 10px;
+        border: none;
+        background-color: white;
+        color: rebeccapurple;
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    .right {
+      flex: 1;
+      padding: 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      justify-content: center;
+
+      .group {
+        flex: 1;
+        align-items: center;
+        justify-content: space-between;
+
+        .fileUploadLabel {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .fileUploadInput {
+          display: none;
+        }
+
+        .profilePic {
+          width: 100px;
+          height: 100px;
+          border-radius: 50%;
+          object-fit: cover;
+        }
+      }
+      h1 {
+        color: #555;
+      }
+
+      .form {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        input {
+          border: none;
+          border-bottom: 1px solid lightgray;
+          padding: 20px 10px;
+        }
+
+        button {
+          width: 50%;
+          padding: 10px;
+          border: none;
+          background-color: #938eef;
+          color: white;
+          font-weight: bold;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+
+  // Media Queries
+  @media (max-width: 767px) {
+    .card {
+      flex-direction: column;
+
+      .left {
+        padding: 30px;
+        h1 {
+          font-size: 50px;
+          line-height: 60px;
+        }
+      }
+
+      .right {
+        padding: 30px;
+
+        .group {
+          flex-direction: column;
+          align-items: stretch;
+
+          .fileUploadLabel {
+            margin-bottom: 20px;
+          }
+
+          .profilePic {
+            width: 80px;
+            height: 80px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    .card {
+      width: 70%;
+
+      .left {
+        padding: 40px;
+        h1 {
+          font-size: 70px;
+          line-height: 80px;
+        }
+      }
+
+      .right {
+        padding: 40px;
+      }
+    }
+  }
+
+  @media (min-width: 992px) {
+    .card {
+      width: 50%;
+
+      .left {
+        padding: 50px;
+      }
+
+      .right {
+        padding: 50px;
+      }
+    }
+  }
+}
