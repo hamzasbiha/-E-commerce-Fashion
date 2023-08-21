@@ -3,9 +3,46 @@
     color: black;
     text-decoration: none;
   }
+  .BtnScroll {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    padding: 10px;
+    background-color: #333333;
+    color: white;
+    font-weight: medium;
+    font-size: 12px;
+    width: 45px;
+    z-index: 50;
+    text-transform: uppercase;
+    border-radius: 100%; /* Make it fully rounded */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+
+    &:hover {
+      background-color: blue;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      background-color: red;
+      box-shadow: 0 8px 10px rgba(0, 0, 0, 0.3);
+    }
+    svg {
+      width: 16px;
+      height: 16px;
+      margin: auto;
+    }
+  }
 }
 @mixin mobile {
-  @media (max-width:480px) {
+  @media (max-width: 480px) {
     @content;
   }
 }
