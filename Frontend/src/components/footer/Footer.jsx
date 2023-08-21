@@ -1,17 +1,28 @@
 import React from "react";
 import img from "../../assets/img.png";
 import "./Footer.scss";
+import { Link } from "react-router-dom";
 const Footer = () => {
   return (
     <div className="footer">
       <div className="top">
         <div className="item">
           <h1>Categories</h1>
-          <span>Women</span>
-          <span>Men</span>
-          <span>Shoes</span>
-          <span>Accessories</span>
-          <span>New Arrivals</span>
+          <Link to={`/products/Homme`} className="link">
+            Homme
+          </Link>
+          <Link to={`/products/Women`} className="link">
+            femme
+          </Link>
+          <Link to={`/products/Shoes`} className="link">
+            Shoes
+          </Link>
+          <Link to={`/products/Accessories`} className="link">
+            Accessories
+          </Link>
+          <Link to={`/products/New Arrivals`} className="link">
+            New Arrivals
+          </Link>
         </div>
         <div className="item">
           <h1>Links</h1>
